@@ -11,103 +11,24 @@
 
 <main>
 
+  <div class="row">
+    <div class="col s2 m3 l3"></div>
+    <div class="col s8 m6 l6">
+        <h5 class="center-align"> Recently Added &#x1f525; </h5>
+    </div>
+    <div class="col s2 m3 l3"></div>
+</div>    
 
 <div class="row">
-    <div class="col s12 n4 l4">
-      <div class="card medium">
-        <div class="card-image">
-          <img class="materialboxed" width="650" src="/images/1.jpg" >
-          
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-           <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 n4 l4">
-        <div class="card medium">
-          <div class="card-image">
-            <img class="materialboxed" width="650" src="/images/2.jpg" >
-            
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card.</p>
-          </div>
-          <div class="card-action">
-             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 n4 l4">
-        <div class="card medium">
-          <div class="card-image">
-            <img class="materialboxed" width="650" src="/images/3.jpg" >
-            
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card.</p>
-          </div>
-          <div class="card-action">
-             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 n4 l4">
-        <div class="card medium">
-          <div class="card-image">
-            <img class="materialboxed" width="650" src="/images/4.jpg" >
-            
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card.</p>
-          </div>
-          <div class="card-action">
-             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 n4 l4">
-        <div class="card medium">
-          <div class="card-image">
-            <img class="materialboxed" width="650" src="/images/5.jpg" >
-            
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card.</p>
-          </div>
-          <div class="card-action">
-             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 n4 l4">
-        <div class="card medium">
-          <div class="card-image">
-            <img class="materialboxed" width="650" src="/images/6.jpg" >
-            
-          </div>
-          <div class="card-content">
-            <p>I am a very simple card.</p>
-          </div>
-          <div class="card-action">
-             <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">favorite</i></a>
-          </div>
-        </div>
-      </div>
-      
-</div>
+  <% for(var i=0; i<art_list.length; i++) { %>
+  <div class="col s12 m6 l6">
+    <img class="materialboxed responsive-img"  style="width: 200px;height: 200px; padding: 30px;margin-left: auto;margin-right: auto;display: block;" src="<%= art_list[i]['arturl'] %>" >
+    <p class="center-align"> <%= art_list[i]['artname'] %> by <span style="color:red;"><%= art_list[i]['artistname'] %></span></p>
+  </div>
+  <% } %>
 
-
-<div class="row">
-    <div class="col s12 m12 l12">
-        
-    </div>
-</div>
-
+ 
+  </div>   
 </main>
 
 <footer class="page-footer">
