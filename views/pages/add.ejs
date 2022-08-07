@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body class="container">
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+  <main>
+
+
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <form action="/uploadArt" enctype="multipart/form-data" method="post">
+          <div class="input-field col s12 m6 l6">
+            <i class="material-icons prefix">palette</i>
+            <input id="icon_palette" type="text" class="validate" name="art_name">
+            <label for="icon_palette">Art Name</label>
+          </div>
+          <div class="input-field col s12 m6 l6">
+            <i class="material-icons prefix">face</i>
+            <input id="icon_face" type="text" class="validate" name="artist_name">
+            <label for="icon_face">Artist Name</label>
+          </div>
+          <div class="input-field col s12 m12 l12">
+            <div class="file-field input-field">
+              <button class="btn">
+                <span><i class="material-icons right">cloud_upload</i>Upload art</span>
+              </button>
+              <input type="file" name="file" required/>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text" name="file_name">
+              </div>
+            </div>
+          </div>
+          <div class="input-field col s4 m4 l4"></div>
+          <div class="input-field col s4 m4 l4">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+          <div class="input-field col s4 m4 l4"></div>
+        </form>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer class="page-footer">
+    <%- include('../partials/footer'); %>
+  </footer>
+
+</body>
+
+</html>
